@@ -1,0 +1,5 @@
+<nav class="navbar navbar-expand">
+    <span class= "navbar-brand" *ngFor="let m of menus">
+        <a class="nav-link" routerLink="{{m.route}}" title ="{{m.tooltip}}"> {{m.display}}</a>
+    </span>
+</nav>

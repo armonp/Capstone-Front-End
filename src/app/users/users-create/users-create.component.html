@@ -1,0 +1,71 @@
+<app-menu> </app-menu>
+<div class="component">
+    <table class="table table-striped">
+        <tr>
+            <th> ID: </th>
+            <td>
+                <input [(ngModel)]="user.id" type="number" disabled>
+            </td>
+        </tr>
+        <tr>
+            <th> First Name</th>
+            <td>
+                <input [(ngModel)]= "user.firstname" type="text" required>
+            </td>
+        </tr>
+        <tr>
+            <th> First Name</th>
+            <td>
+                <input [(ngModel)]= "user.lastname" type="text" required>
+            </td>
+        </tr>
+        <tr>
+            <th> Username</th>
+            <td>
+                <input [(ngModel)]= "user.username" type="text" required>
+            </td>
+        </tr>
+        <tr>
+            <th> Password</th>
+            <td>
+                <input [(ngModel)]= "user.password" type="text" required>
+            </td>
+        </tr>
+        <tr>
+            <th> Phone</th>
+            <td>
+                <input [(ngModel)]= "user.phone" type="text">
+            </td>
+        </tr>
+        <tr>
+            <th> Email
+            <td>
+                <input [(ngModel)]= "user.email" type="email">
+            </td>
+        </tr>
+        <tr>
+            <th> Request Reviewer </th>
+            <td>
+                <input [(ngModel)]= "user.isReviewer" type="radio" id ="reviewer" value=1>
+                <label for="reviewer"> Yes </label> |
+                <input [(ngModel)]= "user.isReviewer" type="radio"  id ="notreviewer" value=0>
+                <label for ="notreviewer"> No </label>
+            </td>
+        </tr>
+        <tr>
+            <th> System Admin</th>
+            <td>
+                <input [(ngModel)]= "user.isAdmin" type="radio" id ="admin" value=1>
+                <label for="admin"> Yes </label> |
+                <input [(ngModel)]= "user.isAdmin" type="radio"  id ="notadmin" value=0>
+                <label for ="notadmin"> No </label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="save()" class="btn btn-primary"> Save</button>
+            </td>
+        </tr>
+
+    </table>
+</div>
