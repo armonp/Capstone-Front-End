@@ -11,11 +11,12 @@ import { UsersDetailComponent } from './users/users-detail/users-detail.componen
 import { UsersEditComponent } from './users/users-edit/users-edit.component';
 import { UsersCreateComponent } from './users/users-create/users-create.component';
 import { UsersSearchPipe } from './users/users-search.pipe';
+import { SortPipe } from './sort.pipe';
 
 @NgModule({
   declarations: [
     AppComponent, UsersListComponent, UsersCreateComponent, UsersEditComponent, UsersSearchPipe, UsersDetailComponent,
-    MenuComponent, 
+    MenuComponent, SortPipe,
     UsersListComponent,
     UsersDetailComponent,
     UsersEditComponent,

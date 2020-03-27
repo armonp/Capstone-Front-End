@@ -1,5 +1,7 @@
 <app-menu> </app-menu>
 <div class="component">
+    <h3>Users List</h3>
+    <input [(ngModel)]="searchCriteria" type="text" class="form-control" placeholder="Search for a user">
     <table class="table table-bordered">
         <tr class="thead-dark">
             <th scope = "col"> ID</th>
@@ -12,7 +14,7 @@
             <th scope = "col"> System Admin</th>
             <th scope = "col"> Actions</th>
         </tr>
-        <tr *ngFor = "let u of users"> 
+        <tr *ngFor = "let u of users | usersSearch:searchCriteria | sort: 'lastname'" > 
             <th scope ="row"> {{u.id}}</th>
             <td scope ="row"> {{u.firstname}}</td>
             <td scope ="row"> {{u.lastname}}</td>

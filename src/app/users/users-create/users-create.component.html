@@ -46,19 +46,13 @@
         <tr>
             <th> Request Reviewer </th>
             <td>
-                <input [(ngModel)]= "user.isReviewer" type="radio" id ="reviewer" value=1>
-                <label for="reviewer"> Yes </label> |
-                <input [(ngModel)]= "user.isReviewer" type="radio"  id ="notreviewer" value=0>
-                <label for ="notreviewer"> No </label>
+                <input [(ngModel)]= "user.isReviewer" type="checkbox">
             </td>
         </tr>
         <tr>
             <th> System Admin</th>
             <td>
-                <input [(ngModel)]= "user.isAdmin" type="radio" id ="admin" value=1>
-                <label for="admin"> Yes </label> |
-                <input [(ngModel)]= "user.isAdmin" type="radio"  id ="notadmin" value=0>
-                <label for ="notadmin"> No </label>
+                <input [(ngModel)]= "user.isAdmin" type="checkbox">
             </td>
         </tr>
         <tr>
