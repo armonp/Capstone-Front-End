@@ -1,0 +1,68 @@
+<app-menu> </app-menu>
+<h3>Edit {{vendor.name}}</h3>
+<div class = "component">
+    <table class="table table-striped">
+        <tr>
+            <th> ID: </th>
+            <td>
+                <input [(ngModel)] = "vendor.id" type="number" disabled>
+            </td>
+        </tr>
+        <tr>
+            <th> Code: </th>
+            <td>
+                <input [(ngModel)] = "vendor.code" type="text">
+            </td>
+        </tr>
+        <tr>
+            <th> Name: </th>
+            <td>
+                <input [(ngModel)] = "vendor.name" type="text">
+            </td>
+        </tr>
+        <tr>
+            <th> Address: </th>
+            <td>
+                <input [(ngModel)] = "vendor.address" type="text">
+            </td>
+        </tr>
+        <tr>
+            <th> City: </th>
+            <td>
+                <input [(ngModel)] = "vendor.city" type="text">
+            </td>
+        </tr>
+        <tr>
+            <th> State: </th>
+            <td>
+                <input [(ngModel)] = "vendor.state" type="text">
+            </td>
+        </tr>
+        <tr>
+            <th> Zip Code </th>
+            <td>
+                <input [(ngModel)] = "vendor.zipCode" type="text">
+            </td>
+        </tr>
+        <tr>
+            <th> Phone Number: </th>
+            <td>
+                <input [(ngModel)] = "vendor.phone" type="phone">
+            </td>
+        </tr>
+        <tr>
+            <th> Email: </th>
+            <td>
+                <input [(ngModel)] = "vendor.email" type="email">
+            </td>
+        </tr>
+        <tr> 
+            <td colspan="2">  
+                <button (click)="save()" class="btn btn-primary"> Save</button>
+            </td>
+        </tr>
+        
+    </table>
+
+</div>
+

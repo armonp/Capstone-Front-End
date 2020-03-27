@@ -1,0 +1,35 @@
+<app-menu> </app-menu>
+<div> 
+    <h3>Vendors List</h3>
+    <input [(ngModel)]="searchCriteria" type="text" class="form-control" placeholder="search for a vendor">
+    <table class="table table-bordered">
+        <tr class="thead-dark">
+            <th> ID</th>
+            <th> Code</th>
+            <th> Name</th>
+            <th> Address</th>
+            <th> City</th>
+            <th> State</th>
+            <th> Zip Code</th>
+            <th> Phone Number</th>
+            <th> Email</th>
+            <th> Actions</th>
+        </tr>
+        <tr *ngFor="let v of vendors | vendorSearch:searchCriteria | sort: 'name'">
+            <th>{{v.id}} </th>
+            <th>{{v.code}} </th>
+            <th>{{v.name}} </th>
+            <th>{{v.address}} </th>
+            <th>{{v.city}} </th>
+            <th>{{v.state}} </th>
+            <th>{{v.zipCode}} </th>
+            <th>{{v.phone}} </th>
+            <th>{{v.email}} </th>
+            <td> 
+                <a routerLink="/vendor/detail/{{v.id}}" title="{{v.name}} details"> 🔎</a> |
+                <a routerLink="/vendor/edit/{{v.id}}" title="Edit {{v.name}}"> 📝</a> |
+            </td>
+        </tr>
+    </table>
+    <button class="btn btn-success" routerLink="/vendor/create"> Create New Vendor</button>
+</div>
