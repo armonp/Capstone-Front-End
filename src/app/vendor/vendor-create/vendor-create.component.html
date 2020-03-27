@@ -41,13 +41,13 @@
         <tr>
             <th> Zip Code </th>
             <td>
-                <input [(ngModel)]= "vendor.zipCode" type="text">
+                <input [(ngModel)]= "vendor.zipCode" type="text" maxlength="5">
             </td>
         </tr>
         <tr>
             <th> Phone Number</th>
             <td>
-                <input [(ngModel)]= "vendor.phone" type="phone">
+                <input [(ngModel)]= "vendor.phone" type="phone" disabled maxlength="12">
             </td>
         </tr>
         <tr>

@@ -37,19 +37,19 @@
         <tr>
             <th> State: </th>
             <td>
-                <input [(ngModel)]="vendor.state" type="text" disabled> 
+                <input [(ngModel)]="vendor.state" type="text" maxlength="2" disabled> 
             </td>
         </tr>
         <tr>
             <th> Zip Code: </th>
             <td>
-                <input [(ngModel)]="vendor.zipCode" type="text" disabled > 
+                <input [(ngModel)]="vendor.zipCode" type="text" disabled  maxlength="5"> 
             </td>
         </tr>
         <tr>
             <th> Phone Number: </th>
             <td>
-                <input [(ngModel)]="vendor.phone" type="phone" disabled> 
+                <input [(ngModel)]="vendor.phone" type="phone" disabled maxlength="12"> 
             </td>
         </tr>
         <tr>

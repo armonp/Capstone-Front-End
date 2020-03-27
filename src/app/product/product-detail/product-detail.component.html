@@ -1,0 +1,55 @@
+<app-menu> </app-menu>
+
+<div class="component">  
+    <h3>{{product.name}} Details</h3>
+    <table class="table table-striped">
+        <tr>
+            <th> ID: </th>
+            <td>
+                <input [(ngModel)]="product.id" type="text" disabled> 
+            </td>
+        </tr>
+        <tr>
+            <th> Part No:</th>
+            <td>
+                <input [(ngModel)]="product.partNbr" type="text" disabled > 
+            </td>
+        </tr>
+        <tr>
+            <th> Name: </th>
+            <td>
+                <input [(ngModel)]="product.name" type="text" disabled> 
+            </td>
+        </tr>
+        <tr>
+            <th> Price: </th>
+            <td>
+                <input [(ngModel)]="product.price" type="text" disabled> 
+            </td>
+        </tr>
+        <tr>
+            <th> Unit: </th>
+            <td>
+                <input [(ngModel)]="product.unit" type="text" disabled> 
+            </td>
+        </tr>
+        <tr>
+            <th> PhotoPath: </th>
+            <td>
+                <input [(ngModel)]="product.photoPath" type="text" disabled> 
+            </td>
+        </tr>
+        <tr>
+            <th> Vendor: </th>
+            <td>
+                <input [(ngModel)]="product.vendor.name" type="text" disabled> 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button (click)="delete()" class="btn btn-danger"> Delete </button> |
+                <button routerLink="/product/edit/{{product.id}}" class="btn btn-warning"> Edit </button>
+            </td>
+        </tr>
+    </table>
+</div>
