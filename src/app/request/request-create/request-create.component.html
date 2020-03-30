@@ -1,0 +1,31 @@
+<app-menu></app-menu>
+<div class="component" id="request-create">
+    <table class="table table-striped">
+        <tr>
+            <th>ID: </th>
+            <td><input [(ngModel)] ="request.id" type="number" disabled></td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td><input [(ngModel)]="request.description" required></td>
+
+        </tr>
+        <tr>
+            <th> Justification</th>
+            <td><input [(ngModel)]="request.justification" required></td>
+        </tr>
+        <tr>
+            <th>Rejection Reason</th>
+            <td><input [(ngModel)]="request.rejectionReason"></td>
+        </tr>
+        <tr>
+            <th>Delivery Mode</th>
+            <td><input [(ngModel)]="request.deliveryMode" required></td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td><input [(ngModel)]="request.status" required></td>
+        </tr>
+    </table>
+<button (click)="save()" class="btn btn-primary"> Save New Request</button>
+</div>

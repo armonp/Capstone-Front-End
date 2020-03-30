@@ -1,0 +1,43 @@
+<app-menu></app-menu>
+<div class="component" id="request-create">
+    <button class="btn btn-warning" routerLink="/request/edit/{{request.id}}"> Edit Request </button> |
+    <button class="btn btn-primary" routerLink="/reqline/list">View Request Lines </button>
+    <table class="table table-striped">
+        <tr>
+            <th>ID: </th>
+            <td><input [(ngModel)] ="request.id" type="number" disabled></td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td><input [(ngModel)]="request.description" disabled></td>
+
+        </tr>
+        <tr>
+            <th> Justification</th>
+            <td><input [(ngModel)]="request.justification" disabled></td>
+        </tr>
+        <tr>
+            <th>Rejection Reason</th>
+            <td><input [(ngModel)]="request.rejectionReason" disabled></td>
+        </tr>
+        <tr>
+            <th>Delivery Mode</th>
+            <td><input [(ngModel)]="request.deliveryMode" disabled></td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td><input [(ngModel)]="request.status" disabled></td>
+        </tr>
+        <tr>
+            <th>Total</th>
+            <td><input [(ngModel)]="request.total" disabled></td>
+        </tr>
+        <tr>
+            <th>Requester</th>
+            <td><input [(ngModel)]="request.user.username" disabled></td>
+        </tr>
+    </table>
+<button (click)="approve()" class="btn btn-success"> Approve Request</button> |
+<button (click)="reject()" class="btn btn-danger"> Reject Request</button> |
+<button (click)="delete()" class="btn btn-danger"> Delete Request </button>
+</div>

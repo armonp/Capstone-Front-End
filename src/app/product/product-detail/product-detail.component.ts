@@ -10,7 +10,7 @@ import { VendorService } from 'src/app/vendor/vendor.service';
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent implements OnInit {
-s
+
   product: Product = new Product();
 
   delete():void {

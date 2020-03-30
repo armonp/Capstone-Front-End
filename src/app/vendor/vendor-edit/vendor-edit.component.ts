@@ -15,7 +15,7 @@ export class VendorEditComponent implements OnInit {
     this.vendorsvc.update(this.vendor).subscribe(
       res => {
         console.debug("Vendor change successful!", res);
-        this.router.navigateByUrl("/vendors/list");
+        this.router.navigateByUrl("/vendor/list");
       },
       err => {
         console.error("Error updating vendor: ", err);
