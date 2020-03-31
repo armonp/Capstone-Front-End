@@ -27,6 +27,12 @@ import { RequestSearchPipe } from './request/request-search.pipe';
 import { RequestDetailComponent } from './request/request-detail/request-detail.component';
 import { RequestCreateComponent } from './request/request-create/request-create.component';
 import { RequestEditComponent } from './request/request-edit/request-edit.component';
+import { ReqlineEditComponent } from './reqline/reqline-edit/reqline-edit.component';
+import { ReqlineListComponent } from './reqline/reqline-list/reqline-list.component';
+import { ReqlineDetailComponent } from './reqline/reqline-detail/reqline-detail.component';
+import { ReqlineCreateComponent } from './reqline/reqline-create/reqline-create.component';
+import { ReqlineSearchPipe } from './reqline/reqline-search.pipe';
+import { LoginComponent } from './user/login/login.component';
 //import { CurrencyPipe } from '@angular/common';
 
 @NgModule({
@@ -53,7 +59,13 @@ import { RequestEditComponent } from './request/request-edit/request-edit.compon
     RequestSearchPipe,
     RequestDetailComponent,
     RequestCreateComponent,
-    RequestEditComponent
+    RequestEditComponent,
+    ReqlineEditComponent,
+    ReqlineListComponent,
+    ReqlineDetailComponent,
+    ReqlineCreateComponent,
+    ReqlineSearchPipe,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

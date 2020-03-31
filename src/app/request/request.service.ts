@@ -8,6 +8,7 @@ const url:string = "http://localhost:5000/api/requests"
   providedIn: 'root'
 })
 export class RequestService {
+  
   list():Observable<Request[]> {
     return this.http.get(`${url}`) as Observable<Request[]>;
   }
@@ -25,15 +26,15 @@ export class RequestService {
   }
   //mark reviewed
   review(request:Request):Observable<any> {
-    return this.http.post(`${url}/review/${request.id}`, request) as Observable<any>;
+    return this.http.put(`${url}/review/${request.id}/${request}`, request) as Observable<any>;
   }
   //mark rejected
   reject(request:Request):Observable<any> {
-    return this.http.post(`${url}/reject/${request.id}`, request) as Observable<any>;
+    return this.http.put(`${url}/reject/${request.id}/${request}`, request) as Observable<any>;
   }
   //approve
   approve(request:Request):Observable<any> {
-    return this.http.post(`${url}/approve/${request.id}`, request) as Observable<any>;
+    return this.http.put(`${url}/approve/${request.id}`, request) as Observable<any>;
   }
   //list for review
 /*   reviews(request:Request):Observable<any> {

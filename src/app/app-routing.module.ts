@@ -16,6 +16,9 @@ import { RequestListComponent } from './request/request-list/request-list.compon
 import { RequestDetailComponent } from './request/request-detail/request-detail.component';
 import { RequestCreateComponent } from './request/request-create/request-create.component';
 import { RequestEditComponent } from './request/request-edit/request-edit.component';
+import { ReqlineListComponent } from './reqline/reqline-list/reqline-list.component';
+import { ReqlineCreateComponent } from './reqline/reqline-create/reqline-create.component';
+import { ReqlineEditComponent } from './reqline/reqline-edit/reqline-edit.component';
 
 
 const routes: Routes = [
@@ -36,6 +39,10 @@ const routes: Routes = [
   { path: "request/detail/:id", component: RequestDetailComponent },
   { path: "request/create", component: RequestCreateComponent},
   { path: "request/edit/:id", component: RequestEditComponent },
+  { path: "reqline/list", component: ReqlineListComponent },
+   {path: "reqline/detail/:id", component: RequestDetailComponent},
+  { path: "reqline/create", component: ReqlineCreateComponent },
+  { path: "reqline/edit/:id", component: ReqlineEditComponent },
   { path: "**", component: UsersListComponent }
 ];
 

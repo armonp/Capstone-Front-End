@@ -4,25 +4,25 @@
     <input [(ngModel)]="searchCriteria" type="text" class="form-control" placeholder="Search for a user">
     <table class="table table-bordered">
         <tr class="thead-dark">
-            <th scope = "col"> ID</th>
-            <th scope ="col"> First Name </th>
-            <th scope = "col"> Last Name</th>
-            <th scope = "col"> Username</th>
-            <th scope = "col"> Phone</th>
-            <th scope = "col"> Email </th>
-            <th scope = "col"> Reviewer</th>
-            <th scope = "col"> System Admin</th>
-            <th scope = "col"> Actions</th>
+            <th> ID</th>
+            <th> First Name </th>
+            <th> Last Name</th>
+            <th> Username</th>
+            <th> Phone</th>
+            <th> Email </th>
+            <th> Reviewer</th>
+            <th> System Admin</th>
+            <th> Actions</th>
         </tr>
         <tr *ngFor = "let u of users | usersSearch:searchCriteria | sort: 'lastname'" > 
-            <th scope ="row"> {{u.id}}</th>
-            <td scope ="row"> {{u.firstname}}</td>
-            <td scope ="row"> {{u.lastname}}</td>
-            <td scope ="row"> {{u.username}}</td>
-            <td scope ="row"> {{u.phone}}</td>
-            <td scope ="row"> {{u.email}}</td>
-            <td scope ="row"> {{u.isReviewer}}</td>
-            <td scope ="row"> {{u.isAdmin}}</td>
+            <th> {{u.id}}</th>
+            <td> {{u.firstname}}</td>
+            <td> {{u.lastname}}</td>
+            <td> {{u.username}}</td>
+            <td> {{u.phone}}</td>
+            <td> {{u.email}}</td>
+            <td> {{u.isReviewer ? '☑' : '🚫'}}</td>
+            <td> {{u.isAdmin ? '☑' : '🚫'}}</td>
             <td> 
                 <a routerLink="/users/detail/{{u.id}}" title="{{u.firstname}} {{u.lastname}} details"> 🔎</a> |
                 <a routerLink="/users/edit/{{u.id}}" title="Edit {{u.firstname}} {{u.lastname}}"> 📝</a> |
