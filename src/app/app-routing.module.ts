@@ -39,11 +39,11 @@ const routes: Routes = [
   { path: "product/edit/:id", component: ProductEditComponent },
   { path: "request/list", component: RequestListComponent },
   { path: "request/detail/:id", component: RequestDetailComponent },
-  { path: "request/create", component: RequestCreateComponent},
+  { path: "request/create/:id", component: RequestCreateComponent},
   { path: "request/edit/:id", component: RequestEditComponent },
-  { path: "reqline/list", component: ReqlineListComponent },
+  { path: "reqline/list/:id", component: ReqlineListComponent },
    {path: "reqline/detail/:id", component: RequestDetailComponent},
-  { path: "reqline/create", component: ReqlineCreateComponent },
+  { path: "reqline/create/:requestId", component: ReqlineCreateComponent },
   { path: "reqline/edit/:id", component: ReqlineEditComponent },
   { path: "**", component: UsersListComponent }
 ];

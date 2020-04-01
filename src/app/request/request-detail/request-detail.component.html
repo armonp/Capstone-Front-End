@@ -1,43 +1,32 @@
 <app-menu></app-menu>
 <div class="component" id="request-create">
-    <button class="btn btn-warning" routerLink="/request/edit/{{request.id}}"> Edit Request </button> |
-    <button class="btn btn-primary" routerLink="/reqline/list">View Request Lines </button>
+    
     <table class="table table-striped">
         <tr>
             <th>ID: </th>
-            <td><input [(ngModel)] ="request.id" type="number" disabled></td>
-        </tr>
-        <tr>
             <th>Description</th>
-            <td><input [(ngModel)]="request.description" disabled></td>
-
-        </tr>
-        <tr>
             <th> Justification</th>
-            <td><input [(ngModel)]="request.justification" disabled></td>
-        </tr>
-        <tr>
             <th>Rejection Reason</th>
-            <td><input [(ngModel)]="request.rejectionReason" disabled></td>
-        </tr>
-        <tr>
             <th>Delivery Mode</th>
-            <td><input [(ngModel)]="request.deliveryMode" disabled></td>
-        </tr>
-        <tr>
             <th>Status</th>
-            <td><input [(ngModel)]="request.status" disabled></td>
-        </tr>
-        <tr>
             <th>Total</th>
-            <td><input [(ngModel)]="request.total" disabled></td>
+            <th>Requester</th>
         </tr>
         <tr>
-            <th>Requester</th>
-            <td><input [(ngModel)]="request.user.username" disabled></td>
-        </tr>
+            <td>{{request.id}}</td>
+            <td>{{request.description}}</td>
+            <td>{{request.justification}}</td>
+            <td>{{request.rejectionReason}}</td>
+            <td>{{request.deliveryMode}}</td>
+            <td>{{request.status}}</td>
+            <td>{{request.total}}</td>
+            <td>{{request.user.username}}</td>
     </table>
+<button class="btn btn-warning" routerLink="/request/edit/{{request.id}}"> Edit Request </button> |
 <button (click)="approve()" class="btn btn-success"> Approve Request</button> |
 <button (click)="reject()" class="btn btn-danger"> Reject Request</button> |
-<button (click)="delete()" class="btn btn-danger"> Delete Request </button>
+<button (click)="delete()" class="btn btn-danger"> Delete Request </button> | 
+<button class="btn btn-info" routerLink = "/reqline/create/{{request.id}}"> Add Request Line</button>
 </div>
+<hr>
+<app-reqline-list> </app-reqline-list>

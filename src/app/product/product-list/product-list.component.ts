@@ -24,6 +24,6 @@ export class ProductListComponent implements OnInit {
       },
       err => {console.error(err); 
       }
-    )
+    );
   }
 }

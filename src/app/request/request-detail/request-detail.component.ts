@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵsetCurrentInjector } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from 'src/app/product/product.service';
 import { RequestService } from '../request.service';
 import { Request } from '../request';
+import { SystemService } from 'src/app/system.service';
 
 @Component({
   selector: 'app-request-detail',
@@ -58,11 +59,12 @@ export class RequestDetailComponent implements OnInit {
   constructor(
     private route:ActivatedRoute,
     private requestsvc: RequestService,
+    private systemsvc: SystemService,
     private router: Router
   ) { }
 
   ngOnInit(): void {
-    let id = this.route.snapshot.params.id
+    let id = this.route.snapshot.params.id;
     this.requestsvc.get(id).subscribe(
       res => {
         this.request = res;

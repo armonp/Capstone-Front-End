@@ -11,5 +11,7 @@ export class Request {
     userId:number;
     user:User;
 
+    requestLines:[];
+
     constructor() {}
 }

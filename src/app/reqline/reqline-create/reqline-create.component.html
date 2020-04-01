@@ -1,1 +1,18 @@
-<p>reqline-create works!</p>
+<p>Enter New Request Line</p>
+<table>
+    <tr>
+        <th> Product: </th>
+        <td>
+            <select [(ngModel)]="reqline.productId">
+                <option *ngFor ="let p of products" value ="{{+p.id}}">{{p.name}}</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <th>QTY</th>
+        <td>
+            <input [(ngModel)]="reqline.qty" type="number">  
+        </td>
+    </tr>
+</table>
+<button (click)="add()" class="btn btn-primary">Add</button>
