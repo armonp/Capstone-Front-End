@@ -28,7 +28,7 @@ export class RequestDetailComponent implements OnInit {
   approve(): void {
     this.requestsvc.approve(this.request).subscribe(
       res => {
-        alert("Request approved");
+        confirm("Request approved");
         console.debug("Request approved", res);
         this.router.navigateByUrl("/request/list");
       },

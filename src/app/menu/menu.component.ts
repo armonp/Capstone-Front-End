@@ -15,7 +15,7 @@ export class MenuComponent implements OnInit {
     new Menu("Requests", "/request/list", "The Request List Page"),
     new Menu("Reviews", "/reviews/{{user.id}}", "List of Reviews for {{user.firstname}}"),
     new Menu("About", "/about", "About Page"),
-    new Menu("Login/Out", "/login/login", "Login or Out")
+    new Menu("Login/Out", "/users/login", "Login or Out")
   ]
   constructor() { }
 

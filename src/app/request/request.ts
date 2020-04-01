@@ -6,11 +6,10 @@ export class Request {
     justification:string;
     rejectionReason:string;
     deliveryMode:string;
-    status:string;
+    status:string = 'NEW';
     total:number = 0;
     userId:number;
     user:User;
 
-    constructor(
-    ) {}
+    constructor() {}
 }

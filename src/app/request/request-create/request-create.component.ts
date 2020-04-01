@@ -5,6 +5,7 @@ import { RequestService } from '../request.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { User } from 'src/app/users/users.class';
 import { UsersService } from 'src/app/users/users.service';
+import { SystemService } from 'src/app/system.service';
 
 @Component({
   selector: 'app-request-create',
@@ -17,7 +18,7 @@ export class RequestCreateComponent implements OnInit {
 
   
   save():void {
-    this.request.userId = Number(this.request.userId)
+    this.request.userId = Number(this.systemsvc.loggedIn.id);
     this.requestsvc.create(this.request).subscribe(
       res => {
         console.debug("Request created", res);
@@ -33,6 +34,7 @@ export class RequestCreateComponent implements OnInit {
   constructor(
     private requestsvc: RequestService,
     private router:Router,
+    private systemsvc: SystemService,
     private usersvc: UsersService,
     //private route: ActivatedRoute
   ) { }

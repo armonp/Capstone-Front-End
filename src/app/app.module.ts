@@ -32,13 +32,13 @@ import { ReqlineListComponent } from './reqline/reqline-list/reqline-list.compon
 import { ReqlineDetailComponent } from './reqline/reqline-detail/reqline-detail.component';
 import { ReqlineCreateComponent } from './reqline/reqline-create/reqline-create.component';
 import { ReqlineSearchPipe } from './reqline/reqline-search.pipe';
-import { LoginComponent } from './user/login/login.component';
+import { UserLoginComponent } from './users/user-login/user-login.component';
 //import { CurrencyPipe } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent, UsersListComponent, UsersCreateComponent, UsersEditComponent, UsersSearchPipe, UsersDetailComponent,
-    MenuComponent, SortPipe,
+    MenuComponent, SortPipe, UserLoginComponent,
     UsersListComponent,
     //CurrencyPipe,
     UsersDetailComponent,
@@ -64,8 +64,7 @@ import { LoginComponent } from './user/login/login.component';
     ReqlineListComponent,
     ReqlineDetailComponent,
     ReqlineCreateComponent,
-    ReqlineSearchPipe,
-    LoginComponent
+    ReqlineSearchPipe
   ],
   imports: [
     BrowserModule,

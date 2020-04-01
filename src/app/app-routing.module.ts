@@ -19,6 +19,7 @@ import { RequestEditComponent } from './request/request-edit/request-edit.compon
 import { ReqlineListComponent } from './reqline/reqline-list/reqline-list.component';
 import { ReqlineCreateComponent } from './reqline/reqline-create/reqline-create.component';
 import { ReqlineEditComponent } from './reqline/reqline-edit/reqline-edit.component';
+import { UserLoginComponent } from './users/user-login/user-login.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: "users/detail/:id", component: UsersDetailComponent},
   { path: "users/create", component: UsersCreateComponent },
   { path: "users/edit/:id", component: UsersEditComponent },
+  { path: "users/login", component: UserLoginComponent},
   { path: "vendor/list", component: VendorListComponent },
   { path: "vendor/detail/:id", component: VendorDetailComponent },
   { path: "vendor/create", component: VendorCreateComponent},

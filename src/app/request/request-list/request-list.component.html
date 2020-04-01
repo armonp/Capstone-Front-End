@@ -1,8 +1,7 @@
 <app-menu> </app-menu>
-<div> 
+<div class="component"> 
     <h3>Request List</h3> 
     <input [(ngModel)]="searchCriteria" type="text" class="form-control" placeholder="search for a request">
-    <button class="btn btn-success" routerLink="/request/create"> Create New Request</button>
     <table class="table table-bordered">
         <tr class="thead-dark">
             <th> ID</th>
@@ -15,20 +14,21 @@
             <th> User </th>
             <th> Actions</th>
         </tr>
-        <tr *ngFor="let r of requests | requestSearch:searchCriteria | sort: 'status'">
-            <th>{{r.id}} </th>
-            <th>{{r.description}} </th>
-            <th>{{r.justification}} </th>
-            <th>{{r.rejectionReason}} </th>
-            <th>{{r.deliveryMode}} </th>
-            <th>{{r.status}} </th>
-            <th>{{r.total}} </th>
-            <th>{{r.user.username}}  </th>
+        <tr *ngFor = "let r of requests | requestSearch:searchCriteria | sort: 'status'">
+            <td>{{r.id}} </td>
+            <td>{{r.description}} </td>
+            <td>{{r.justification}} </td>
+            <td>{{r.rejectionReason}} </td>
+            <td>{{r.deliveryMode}} </td>
+            <td>{{r.status}} </td>
+            <td>{{r.total}} </td>
+            <td>{{r.user.username}}  </td>
             <td> 
                 <a routerLink="/request/detail/{{r.id}}" title="{{r.description}} details"> 🔎</a> |
                 <a routerLink="/request/edit/{{r.id}}" title="Edit {{r.description}}"> 📝</a> |
             </td>
         </tr>
     </table>
+    <button class="btn btn-success" routerLink="/request/create"> Create New Request</button>
 </div>
 
