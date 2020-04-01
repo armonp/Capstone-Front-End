@@ -6,7 +6,7 @@ import { Request } from './request';
 })
 export class RequestSearchPipe implements PipeTransform {
 
-  transform(requests: Request[], searchCriteria: string): Request[] {
+  transform(requests: Request[], searchCriteria: string=""): Request[] {
     if (searchCriteria ="") return requests;
     searchCriteria = searchCriteria.toLowerCase();
     let selReqs: Request[] = [];
