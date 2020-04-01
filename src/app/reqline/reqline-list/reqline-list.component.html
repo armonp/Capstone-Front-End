@@ -1,13 +1,18 @@
-<p>Request lines for This Request </p>
+<p>Request lines for This Request No {{request.id}} </p>
 <table class="table">
     <tr>  
         <th> Product</th>
         <th> QTY </th>
         <th> Total</th>
+        <th> Actions</th>
     </tr>
-<!--     <tr *ngFor="let rq of request.reqLines" >
-        <th>{{rq.product.name}}</th>
-        <th>{{rq.qty}}</th>
-        <th>{{rq.product.price * rq.qty | currency }}</th>
-    </tr> -->
+    <tr *ngFor="let rl of request.requestLines" >
+        <td>{{rl.product.name}}</td>
+        <td>{{rl.qty}}</td>
+        <td>{{rl.product.price * rl.qty | currency }}</td>
+        <td> 
+            <a routerLink="/reqline/edit/{{rl.id}}"> Edit </a> |
+            <a> Remove </a>
+        </td>
+    </tr>
 </table>
